@@ -69,8 +69,6 @@
                     <li>CS61B</li>
                     <li>EECS16B</li>
                     <li>ESPM40</li>
-                    <li>DataSci</li>
-                    <li>R1B Slavic</li>
                   </ul>
                 </div>
               </div>
@@ -96,8 +94,6 @@
                   </h2>
                   <ul>
                     <li>morning</li>
-                    <li>late afternoon</li>
-                    <li>pomodoro</li>
                     <li>groupstyle</li>
                     <li>review sessions</li>
                   </ul>

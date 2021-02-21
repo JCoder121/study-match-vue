@@ -1,11 +1,9 @@
 <template>
   <section class="container">
     <div class="fixed header">
-      <!-- 
+      <!--
       <i class="material-icons" @click="index = 0">refresh</i>
-      <i class="material-icons">person</i>
-      <span>Replace with toolbar</span>
-      <i class="material-icons">message</i>
+      <span>Study Group Match</span>
       <i class="material-icons">tune</i>
       -->
     </div>
@@ -28,15 +26,84 @@
         @draggedUp="emitAndNext('skip')"
         class="rounded-borders card card--one"
       >
-        <div style="height: 100%">
-          <img
+        <div class="firstsplit">
+          <!-- <img
             :src="require(`../assets/images/${current.src}`)"
             class="rounded-borders"
-          />
-          <div class="text">
-            <h2>
+          /> -->
+
+          <!-- CLAIRE LEE top text box-->
+          <div style="flex: 1; background: pink;">
+            <h1>
               {{ current.name }}, <span>{{ current.age }}</span>
-            </h2>
+            </h1>
+          </div>
+
+          <!-- everything below the name-->
+          <div class="threesplit" style="flex: 4; background: orange;">
+            <!-- pronouns and picture-->
+            <div style="flex: 1; background: red;">
+              <div
+                class="pronounpicture"
+                style="padding-right: 3vH; padding-top: 3vH; padding-bottom: 4vH; padding-left: 3vH; max-height: 40vh"
+              >
+                <h2>she/her/hers</h2>
+                <img :src="require(`../assets/images/${current.src}`)" />
+              </div>
+            </div>
+            <!--basic info and classes -->
+            <div style="flex: 1; ">
+              <div class="bioclasses" style="flex: 3; padding-left: 2vH;">
+                <!--bio that includes year, major, location -->
+                <div>
+                  <h3><i class="fas fa-user"></i> Freshman</h3>
+                  <h3><i class="fas fa-user"></i> Intended Computer Science</h3>
+                  <h3><i class="fas fa-user"></i> Berkeley, CA</h3>
+                </div>
+                <!--list of classes -->
+                <div style="flex: 4">
+                  <h2 style=" margin: 0.5vh; padding-top: 5vH; ">
+                    Classes <i class="fas fa-pencil-alt"></i>
+                  </h2>
+                  <ul style=" margin: 1vh;">
+                    <li>CS61B</li>
+                    <li>EECS16B</li>
+                    <li>ESPM40</li>
+                    <li>DataSci</li>
+                    <li>R1B Slavic</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- hobbies and study habits-->
+            <div style="flex: 1;">
+              <div class="bioclasses" style="flex: 3">
+                <!--bio that includes year, major, location -->
+                <div>
+                  <h2 style="margin: 0.5vh;">
+                    Hobbies <i class="fas fa-basketball-ball"></i>
+                  </h2>
+                  <ul>
+                    <li>dance</li>
+                    <li>reading</li>
+                    <li>hiking</li>
+                  </ul>
+                </div>
+                <!--list of classes -->
+                <div style="flex: 4">
+                  <h2 style="margin: 0.5vh;">
+                    Study Habits <i class="far fa-clock"></i>
+                  </h2>
+                  <ul>
+                    <li>morning</li>
+                    <li>late afternoon</li>
+                    <li>pomodoro</li>
+                    <li>groupstyle</li>
+                    <li>review sessions</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Vue2InteractDraggable>
@@ -53,7 +120,10 @@
         />
         <div class="text">
           <h2>
-            {{ next.name }}, <span>{{ next.age }}</span>
+            {{ next.name }}
+          </h2>
+          <h2>
+            {{ next.age }}
           </h2>
         </div>
       </div>
@@ -78,6 +148,7 @@
     </div>
   </section>
 </template>
+
 <script>
 import { Vue2InteractDraggable, InteractEventBus } from "vue2-interact";
 const EVENTS = {
@@ -98,7 +169,7 @@ export default {
         draggedUp: EVENTS.SKIP,
       },
       cards: [
-        { src: "karina.jpg", name: "Karina", age: 10 },
+        { src: "karina.jpg", name: "Karina", age: 7 },
         { src: "alexander.jpg", name: "Alexander", age: 5 },
         { src: "bona.jpg", name: "Bona", age: 3 },
         { src: "ichi.jpg", name: "Ichi", age: 7 },
@@ -146,7 +217,61 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h1 {
+  font-size: 70px;
+  margin: 1vh;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 0.5vh;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 1vh;
+}
+
+li {
+  font-size: 18px;
+}
+
+.icon {
+  top: 5px;
+  left: 5px;
+}
+
+.firstsplit {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.threesplit {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-grow: 1;
+}
+
+.pronounpicture {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  flex-grow: 1;
+}
+
+.bioclasses {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex-grow: 1;
+}
+
 .container {
+  display: flex;
   background: #eceff1;
   width: 100%;
   height: 100vh;
@@ -160,12 +285,11 @@ export default {
   color: white;
   text-align: center;
   font-style: bold;
-  //font-family: "Engagement", cursive;
-  font-family: "Engagement";
-  background: #2a0cd3c4;
-  //background: -webkit-linear-gradient(to top, #b91d73, #f953c6);
-  //background: linear-gradient(to top, #b91d73, #f953c6);
-  clip-path: polygon(0 19%, 100% 19%, 100% 76%, 0 89%);
+  font-family: "Staatliches", cursive;
+  background: #000080;
+  background: -webkit-linear-gradient(to top, #d1b70f, #000080);
+  background: linear-gradient(to top, #d1b70f, #000080);
+  clip-path: polygon(0 20%, 100% 20%, 100% 76%, 0 89%);
   display: flex;
   justify-content: space-between;
   span {
@@ -214,7 +338,7 @@ export default {
     }
   }
   &--like {
-    background-color: rgb(255, 0, 0);
+    background-color: green;
     padding: 0.5rem;
     color: white;
     box-shadow: 0 10px 13px -6px rgba(0, 0, 0, 0.2),
@@ -230,7 +354,6 @@ export default {
     color: green;
   }
 }
-
 .flex {
   display: flex;
   &--center {
@@ -250,7 +373,7 @@ export default {
   border-radius: 12px;
 }
 .card {
-  width: 40vw;
+  width: 60vw;
   height: 60vh;
   color: white;
   img {

@@ -135,9 +135,6 @@
       <div class="btn btn--decline" @click="reject">
         <i class="material-icons">delete</i>
       </div>
-      <div class="btn btn--skip" @click="skip">
-        <i class="material-icons">call_missed</i>
-      </div>
       <div class="btn btn--like" @click="match">
         <i class="material-icons">favorite</i>
       </div>
@@ -270,12 +267,13 @@ li {
   display: flex;
   background: #eceff1;
   width: 100%;
-  height: 100vh;
+  //height: 80vh;
+  margin-top: 80px;
 }
 .header {
   width: 100%;
   height: 60vh;
-  z-index: 0;
+
   top: 0;
   left: 0;
   color: white;

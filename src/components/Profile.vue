@@ -249,6 +249,7 @@ export default {
 <style scoped>
 form {
   margin-bottom: 2rem;
+  margin-top: 120px;
 }
 
 [class*="-message"] {

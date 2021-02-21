@@ -1,19 +1,18 @@
 <template>
   <div class="msg">
     <h1>study group messaging list system</h1>
-    
   </div>
 </template>
 
 <script>
 export default {
-  name: 'study group',
-  data () {
+  name: "study group",
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  }
-}
+      msg: "Welcome to Your Vue.js App",
+    };
+  },
+};
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">

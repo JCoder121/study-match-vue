@@ -2,7 +2,7 @@
   <div id="app">
     <!-- <swipeable-cards /> -->
     <header class="app-header">
-      <Navbar />
+      <Navbar class="header" />
     </header>
     <main class="container">
       <router-view />
@@ -20,6 +20,11 @@ export default {
 </script>
 
 <style>
+.nav {
+  background: black;
+  width: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -27,7 +32,8 @@ body {
   z-index: 0;
 }
 
-header {
+.header {
+  position: fixed;
   width: 100vw;
   background-color: #222;
   padding: 34px;

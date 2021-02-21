@@ -7,20 +7,20 @@
       <router-link to="/profile">Profile</router-link>
     </div>
     -->
-    
-    <div class="menu-item">
-      <router-link to="/swipe">Home</router-link>
-    </div>
-    <div class="menu-item">
-      <router-link to="/matches">Matches</router-link>
-    </div>
-    <div class="menu-item">
-      <router-link to="/groups">Study Groups</router-link>
-    </div>
-    <div class="menu-item">
-      <router-link to="/profile">Profile</router-link>
-    </div>
 
+    <div class="menu-item">
+      <i class="material-icons"> <router-link to="/swipe">home</router-link></i>
+    </div>
+    <div class="menu-item">
+      <i class="material-icons">
+        <router-link to="/matches">local_fire_department</router-link></i
+      >
+    </div>
+    <div class="menu-item">
+      <i class="material-icons">
+        <router-link to="/profile">person</router-link></i
+      >
+    </div>
   </navbar>
 </template>
 
@@ -34,13 +34,15 @@ export default {
 <style>
 navbar {
   display: flex;
+  top: 0;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
 
 navbar .menu-item {
   color: white;
-  padding: 10px 60px;
+  padding: 10px 100px;
   position: relative;
   text-align: center;
   border-bottom: 3px solid transparent;

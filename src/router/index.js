@@ -1,5 +1,5 @@
 import Vue from "vue";
-import VueRouter from "vue-router";
+import Router from "vue-router";
 //import Home from "../views/Home.vue";
 import About from "../views/About.vue";
 //import SwipeView from "../views/SwipeView.vue";
@@ -8,10 +8,22 @@ import SwipeableCards from "../components/SwipeableCards.vue";
 import Profile from "../components/Profile.vue";
 import StudyGroupMsg from "../components/StudyGroupMsg.vue";
 import Matches from "../components/Matches.vue";
+import Ping from '../components/Ping.vue';
+import Books from '../components/Books.vue';
 
-Vue.use(VueRouter);
+Vue.use(Router);
 
 const routes = [
+  {
+    path: '/books',
+    name: 'Books',
+    component: Books,
+  },
+  {
+    path: "/ping",
+    name: "Ping",
+    component: Ping
+  },
   {
     path: "/",
     name: "Home",
@@ -49,7 +61,7 @@ const routes = [
   }
 ];
 
-const router = new VueRouter({
+const router = new Router({
   mode: "history",
   base: process.env.BASE_URL,
   routes

@@ -1,24 +1,39 @@
 <template>
   <div id="app">
-    <swipeable-cards />
+    <!-- <swipeable-cards /> -->
+    <header class="app-header">
+      <Navbar />
+    </header>
+    <main class="container">
+      <router-view />
+    </main>
   </div>
 </template>
 
 <script>
-import SwipeableCards from './components/SwipeableCards.vue'
+import Navbar from "./components/Navbar";
+
 export default {
-  name: 'app',
-  components: { SwipeableCards }
-}
+  name: "app",
+  components: { Navbar },
+};
 </script>
 
 <style>
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   z-index: 0;
 }
+
+header {
+  width: 100vw;
+  background-color: #222;
+  padding: 34px;
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;

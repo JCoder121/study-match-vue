@@ -1,9 +1,13 @@
 <template>
   <section class="container">
     <div class="fixed header">
+      <!-- 
       <i class="material-icons" @click="index = 0">refresh</i>
+      <i class="material-icons">person</i>
       <span>Replace with toolbar</span>
+      <i class="material-icons">message</i>
       <i class="material-icons">tune</i>
+      -->
     </div>
     <div
       v-if="current"
@@ -161,7 +165,7 @@ export default {
   background: #2a0cd3c4;
   //background: -webkit-linear-gradient(to top, #b91d73, #f953c6);
   //background: linear-gradient(to top, #b91d73, #f953c6);
-  clip-path: polygon(0 0%, 100% 0%, 100% 76%, 0 89%);
+  clip-path: polygon(0 19%, 100% 19%, 100% 76%, 0 89%);
   display: flex;
   justify-content: space-between;
   span {

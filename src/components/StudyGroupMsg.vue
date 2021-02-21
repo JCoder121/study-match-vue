@@ -1,13 +1,13 @@
 <template>
-  <div class="hello">
-    <h1>New View</h1>
+  <div class="msg">
+    <h1>study group messaging list system</h1>
     
   </div>
 </template>
 
 <script>
 export default {
-  name: 'hello',
+  name: 'study group',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'

@@ -1,13 +1,13 @@
 <template>
-  <div class="hello">
-    <h1>New View</h1>
+  <div class="matcches">
+    <h1>List of all matches here</h1>
     
   </div>
 </template>
 
 <script>
 export default {
-  name: 'hello',
+  name: 'matches',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'

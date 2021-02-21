@@ -2,11 +2,17 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-10">
-        <h1>Matches!!</h1>
+        <h1>Students</h1>
         <hr />
         <br /><br />
         <alert :message="message" v-if="showMessage"></alert>
-
+        <button
+          type="button"
+          class="btn btn-success btn-sm"
+          v-b-modal.student-modal
+        >
+          Add Student
+        </button>
         <br /><br />
         <table class="table table-hover">
           <thead>
@@ -23,6 +29,14 @@
 
               <td>
                 <div class="btn-group" role="group">
+                  <button
+                    type="button"
+                    class="btn btn-warning btn-sm"
+                    v-b-modal.student-update-modal
+                    @click="editStudent(student)"
+                  >
+                    Update
+                  </button>
                   <button
                     type="button"
                     class="btn btn-danger btn-sm"

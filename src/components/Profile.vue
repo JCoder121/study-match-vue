@@ -5,109 +5,40 @@
       <input
         ref="first"
         type="text"
-        :class="{ 'has-error': submitting && invalidName }"
         v-model="student.name"
         @focus="clearStatus"
         @keypress="clearStatus"
       />
       <label>Pronoun</label>
-      <input
-        type="text"
-        :class="{ 'has-error': submitting && invalidPronoun }"
-        v-model="student.pronoun"
-        @focus="clearStatus"
-      />
+      <input type="text" v-model="student.pronoun" @focus="clearStatus" />
       <label>Year</label>
-      <input
-        type="text"
-        :class="{ 'has-error': submitting && invalidYear }"
-        v-model="student.year"
-        @focus="clearStatus"
-      />
+      <input type="text" v-model="student.year" @focus="clearStatus" />
       <label>Major(s)</label>
-      <input
-        type="text"
-        :class="{ 'has-error': submitting && invalidMajor }"
-        v-model="student.major"
-        @focus="clearStatus"
-      />
+      <input type="text" v-model="student.major" @focus="clearStatus" />
       <label>Current Location</label>
-      <input
-        type="text"
-        :class="{ 'has-error': submitting && invalidLocation }"
-        v-model="student.location"
-        @focus="clearStatus"
-      />
+      <input type="text" v-model="student.location" @focus="clearStatus" />
       <h5>Classes (Choose 3):</h5>
       <label>Class 1</label>
-      <input
-        type="text"
-        :class="{ 'has-error': submitting && invalidClass1 }"
-        v-model="student.class1"
-        @focus="clearStatus"
-      />
+      <input type="text" v-model="student.class1" @focus="clearStatus" />
       <label>Class 2</label>
-      <input
-        type="text"
-        :class="{ 'has-error': submitting && invalidClass2 }"
-        v-model="student.class2"
-        @focus="clearStatus"
-      />
+      <input type="text" v-model="student.class2" @focus="clearStatus" />
       <label>Class 3</label>
-      <input
-        type="text"
-        :class="{ 'has-error': submitting && invalidClass3 }"
-        v-model="student.class3"
-        @focus="clearStatus"
-      />
+      <input type="text" v-model="student.class3" @focus="clearStatus" />
       <h5>Hobbies (Choose 3):</h5>
       <label>Hobby 1</label>
-      <input
-        type="text"
-        :class="{ 'has-error': submitting && invalidHobby1 }"
-        v-model="student.hobby1"
-        @focus="clearStatus"
-      />
+      <input type="text" v-model="student.hobby1" @focus="clearStatus" />
       <label>Hobby 2</label>
-      <input
-        type="text"
-        :class="{ 'has-error': submitting && invalidHobby2 }"
-        v-model="student.hobby2"
-        @focus="clearStatus"
-      />
+      <input type="text" v-model="student.hobby2" @focus="clearStatus" />
       <label>Hobby 3</label>
-      <input
-        type="text"
-        :class="{ 'has-error': submitting && invalidHobby3 }"
-        v-model="student.hobby3"
-        @focus="clearStatus"
-      />
+      <input type="text" v-model="student.hobby3" @focus="clearStatus" />
       <h5>Study Habits (Choose 3):</h5>
       <label>Study Habit 1</label>
-      <input
-        type="text"
-        :class="{ 'has-error': submitting && invalidHabit1 }"
-        v-model="student.habit1"
-        @focus="clearStatus"
-      />
+      <input type="text" v-model="student.habit1" @focus="clearStatus" />
       <label>Study Habit 2</label>
-      <input
-        type="text"
-        :class="{ 'has-error': submitting && invalidHabit2 }"
-        v-model="student.habit2"
-        @focus="clearStatus"
-      />
+      <input type="text" v-model="student.habit2" @focus="clearStatus" />
       <label>Study Habit 3</label>
-      <input
-        type="text"
-        :class="{ 'has-error': submitting && invalidHabit3 }"
-        v-model="student.habit3"
-        @focus="clearStatus"
-      />
+      <input type="text" v-model="student.habit3" @focus="clearStatus" />
 
-      <p v-if="error && submitting" class="error-message">
-        ❗Please fill out all required fields
-      </p>
       <p v-if="success" class="success-message">
         ✅ Student successfully added
       </p>
@@ -256,9 +187,11 @@ form {
   font-weight: 500;
 }
 
+/*
 .error-message {
   color: #d33c40;
 }
+*/
 
 .success-message {
   color: #32a95d;

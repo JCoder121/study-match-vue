@@ -33,16 +33,16 @@
           /> -->
 
           <!-- CLAIRE LEE top text box-->
-          <div style="flex: 1; background: pink;">
+          <div style="flex: 1; background: pink">
             <h1>
-              {{ current.name }}, <span>{{ current.age }}</span>
+              {{ current.name }}
             </h1>
           </div>
 
           <!-- everything below the name-->
-          <div class="threesplit" style="flex: 4; background: orange;">
+          <div class="threesplit" style="flex: 4; background: pink;">
             <!-- pronouns and picture-->
-            <div style="flex: 1; background: red;">
+            <div style="flex: 1; ">
               <div
                 class="pronounpicture"
                 style="padding-right: 3vH; padding-top: 3vH; padding-bottom: 4vH; padding-left: 3vH; max-height: 40vh"
@@ -261,6 +261,7 @@ li {
   flex-direction: column;
   height: 100%;
   flex-grow: 1;
+  top: -150px;
 }
 
 .container {
@@ -342,7 +343,8 @@ li {
     }
   }
   &--decline {
-    color: red;
+    color: white;
+    background: red;
   }
   &--skip {
     color: green;
@@ -369,7 +371,7 @@ li {
 .card {
   width: 60vw;
   height: 60vh;
-  color: white;
+  color: black;
   img {
     object-fit: cover;
     display: block;

@@ -9,15 +9,15 @@ import Profile from "../components/Profile.vue";
 import StudyGroupMsg from "../components/StudyGroupMsg.vue";
 import Matches from "../components/Matches.vue";
 import Ping from '../components/Ping.vue';
-import Books from '../components/Books.vue';
+import Students from '../components/Student.vue';
 
 Vue.use(Router);
 
 const routes = [
   {
-    path: '/books',
-    name: 'Books',
-    component: Books,
+    path: '/students',
+    name: 'Students',
+    component: Students,
   },
   {
     path: "/ping",
